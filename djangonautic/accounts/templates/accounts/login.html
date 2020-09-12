@@ -8,8 +8,9 @@
     {{ form }}
     {% if request.GET.next %}
         <input type='hidden' name='text' value={{request.GET.next}}>
-    {% endif }
-    <input type="submit" value="Login">
+    {% endif %}
+        <input type="submit" value="Login">
+    <p>Not got an account? <a href="{% url 'accounts:signup' %}">Sign Up</a></p>
 </form>
 
 {% endblock %}
